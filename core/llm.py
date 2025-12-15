@@ -31,7 +31,7 @@ class LLMClient:
         if provider == LLMProvider.OPENAI:
             self.api_key = os.getenv("OPENAI_API_KEY", "sk-xxx")
         elif provider == LLMProvider.QWEN:
-            self.api_key = os.getenv("DASHSCOPE_API_KEY", "sk-df38aaf4f96d4bc6ba630d9dd57adabc")
+            self.api_key = os.getenv("DASHSCOPE_API_KEY", "sk-xxx")
 
     def chat(self, system_prompt, user_prompt):
         if self.MOCK_MODE:
