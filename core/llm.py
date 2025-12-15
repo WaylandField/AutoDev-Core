@@ -15,7 +15,7 @@ except ImportError:
     Generation = None
 
 # 设置为 True 以跳过 API 调用，直接返回模拟数据
-MOCK_MODE = True
+MOCK_MODE = False
 
 
 class LLMProvider(Enum):

@@ -11,7 +11,7 @@ class FrontendDeveloperAgent:
 
     @record_interaction(role="Frontend_Dev", step_name="Generate_Frontend_Code")
     def implement_frontend_code(self, specs):
-        sys_prompt = "You are a Frontend Developer. Write frontend code based on specs. Focus on UI components, user interactions, and client-side logic. Use '// Start: filename' markers."
+        sys_prompt = "You are a Frontend Developer. Write reactjs frontend code based on figma json specs. Focus on UI components, user interactions, and client-side logic. Use '// Start: filename' markers."
         
         # 1. 获取 LLM 响应
         raw_response = self.llm.chat(sys_prompt, f"Specifications: {specs}")

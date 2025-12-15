@@ -12,12 +12,12 @@ def main():
     print("🤖 AutoDev-Core: AI Automated Development Framework")
     print("==================================================\n")
 
-    user_requirement = input("请输入您的需求 (回车默认: '众筹平台'): ") or "众筹平台"
-    llm_choice = input("请选择LLM提供商 (1: OpenAI, 2: 阿里云千问, 默认: 1): ") or "1"
+    user_requirement = input("请输入您的需求 (回车默认: '集群监控平台'): ") or "集群监控平台"
+    llm_choice = input("请选择LLM提供商 (1: 阿里云千问, 2: OpenAI, 默认: 1): ") or "1"
     workspace = "workspace_output"
     
     # 选择LLM提供商
-    provider = LLMProvider.OPENAI if llm_choice == "1" else LLMProvider.QWEN
+    provider = LLMProvider.QWEN if llm_choice == "1" else LLMProvider.OPENAI
     
     # 初始化
     pm = PMAgent(provider)
@@ -41,7 +41,7 @@ def main():
         design = designer.design_ui(prd)
         
         print("\n[Step 3] Architect Defining Specs...")
-        specs = architect.define_specs(prd, design)
+        specs = architect.define_specs(prd, prd)
         
         print("\n[Step 4] Backend Developer Writing Code...")
         backend_files = backend_dev.implement_backend_code(specs)

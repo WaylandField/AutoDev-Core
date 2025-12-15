@@ -11,7 +11,7 @@ class BackendDeveloperAgent:
 
     @record_interaction(role="Backend_Dev", step_name="Generate_Backend_Code")
     def implement_backend_code(self, specs):
-        sys_prompt = "You are a Backend Developer. Write backend code based on specs. Focus on server-side logic, APIs, databases, and backend services. Use '// Start: filename' markers."
+        sys_prompt = "You are a Nodejs Backend Developer. Write backend code based on specs. Focus on server-side logic, APIs, databases, and backend services. Use '// Start: filename' markers."
         
         # 1. 获取 LLM 响应
         raw_response = self.llm.chat(sys_prompt, f"Specifications: {specs}")
